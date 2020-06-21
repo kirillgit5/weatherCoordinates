@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCollectionViewCell" id="gTV-IL-0wX" customClass="WeatherCollectionViewCell" customModule="weatherCoordinates" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="114" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="114" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG2-bk-Vxp">
+                        <rect key="frame" x="36" y="6" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="JwL-B7-p12"/>
+                            <constraint firstAttribute="height" constant="21" id="LNI-SF-TSo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vmn-Sl-Wu5">
+                        <rect key="frame" x="8" y="31" width="98" height="77"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="77" id="VTS-AJ-TFx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5u-3d-mMu">
+                        <rect key="frame" x="36" y="122" width="42" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="eSl-f5-fxo"/>
+                            <constraint firstAttribute="width" constant="42" id="nEm-dH-3H7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vmn-Sl-Wu5" firstAttribute="top" secondItem="hG2-bk-Vxp" secondAttribute="bottom" constant="4" id="AQv-fm-VZN"/>
+                <constraint firstItem="hG2-bk-Vxp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="Do5-gT-9av"/>
+                <constraint firstAttribute="trailing" secondItem="Vmn-Sl-Wu5" secondAttribute="trailing" constant="8" id="LgU-jG-5GJ"/>
+                <constraint firstItem="hG2-bk-Vxp" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="XmQ-5Z-waa"/>
+                <constraint firstItem="N5u-3d-mMu" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="axW-tP-hkh"/>
+                <constraint firstItem="Vmn-Sl-Wu5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="fbr-Q5-lby"/>
+                <constraint firstItem="N5u-3d-mMu" firstAttribute="top" secondItem="Vmn-Sl-Wu5" secondAttribute="bottom" constant="14" id="qDX-Yq-Qkw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="114" height="150"/>
+            <connections>
+                <outlet property="temperatuerValue" destination="N5u-3d-mMu" id="iE9-W5-TqT"/>
+                <outlet property="timeLabel" destination="hG2-bk-Vxp" id="R5q-XJ-zad"/>
+                <outlet property="weatherImageView" destination="Vmn-Sl-Wu5" id="pMC-bJ-MXJ"/>
+            </connections>
+            <point key="canvasLocation" x="8.6956521739130448" y="136.60714285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
