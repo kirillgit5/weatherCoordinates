@@ -50,7 +50,7 @@ class SearchWeatherViewController: UIViewController {
         view.endEditing(true)
         guard let lat = double(from: latTextField),
             let lon = double(from: lonTextField) else {return}
-        if (0.0...10.0).contains(lat) && (0.0...10.0).contains(lon) {
+        if (0.0...50.0).contains(lat) && (0.0...50.0).contains(lon) {
             coordinates = Coordinate(lat: lat, lon: lon)
             performSegue(withIdentifier: "showWeather", sender: nil)
         } else {

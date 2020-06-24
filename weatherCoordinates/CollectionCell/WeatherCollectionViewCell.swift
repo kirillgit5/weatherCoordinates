@@ -28,9 +28,6 @@ class WeatherCollectionViewCell: UICollectionViewCell {
         } else {
             temperatuerValue.text = " None"
         }
-        let weatherCode = weather.weatherCode?.value ?? "default"
-        guard let image = UIImage(named: weatherCode) else {return}
-        weatherImageView.image = image
         if let observationTime = weather.observationTime?.value ,
             let date =  DateManager.shared.dateFormatFromIso8601(from: observationTime) ,
             let time = DateManager.shared.dateFormatCurrentHourFromIso8601(from: date) {
@@ -38,6 +35,9 @@ class WeatherCollectionViewCell: UICollectionViewCell {
         } else {
             timeLabel.text = "None"
         }
+        let weatherCode = weather.weatherCode?.value ?? "clear"
+        guard let image = UIImage(named: weatherCode) else {return}
+        weatherImageView.image = image
     }
     
 }

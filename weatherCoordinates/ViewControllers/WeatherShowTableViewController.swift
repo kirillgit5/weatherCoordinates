@@ -49,19 +49,23 @@ class WeatherShowTableViewController: UITableViewController {
             let sectionDate = DateManager.shared.dateFormatCurrentDateForSection(from: date) else {return nil}
         return sectionDate
     }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        50
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170.0
     }
     
     //MARK : - Public Methods
     func makeRequest(urlString: UrlString) {
-        NetworkService.shared.networkfetch(with: urlString) {[weak self](weatherModels) in
-            guard let self = self else {return}
+        NetworkService.shared.alamofireNetworkReqest(with: urlString) {[weak self] (weatherModels) in
+            guard let self = self else { return }
             guard let weatherModels = weatherModels else {return}
             self.weathers = SortManager.shared.sortWeatherDate(weathersData: weatherModels)
             self.activityIndicator.stopAnimating()
             self.tableView.reloadData()
-            
         }
     }
 }

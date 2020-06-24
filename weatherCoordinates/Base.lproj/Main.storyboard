@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vSv-TR-15e">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchWeatherViewController" customModule="weatherCoordinates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-ik-4pG">
-                                <rect key="frame" x="81.666666666666671" y="128" width="250.66666666666663" height="39"/>
+                                <rect key="frame" x="34.5" y="40" width="251" height="39"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YVe-ik-4pG" secondAttribute="height" multiplier="238:37" id="Krc-5Q-Xfb"/>
@@ -28,17 +28,17 @@
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQs-pn-ooG">
-                                <rect key="frame" x="332.33333333333331" y="128" width="21" height="22"/>
+                                <rect key="frame" x="285.5" y="40" width="21" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UQs-pn-ooG" secondAttribute="height" multiplier="20:21" id="to9-o7-3d8"/>
                                 </constraints>
                                 <state key="normal" image="magnifyingglass.circle" catalog="system"/>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="FJ9-Dd-APh">
-                                <rect key="frame" x="16" y="201" width="382" height="31"/>
+                                <rect key="frame" x="16" y="113" width="288" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use my geolocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCM-rI-zMI">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="31"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="5G8-qU-ZVl"/>
@@ -49,7 +49,7 @@
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZL7-7f-Kpm">
-                                        <rect key="frame" x="333" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="239" y="0.0" width="51" height="31"/>
                                         <connections>
                                             <action selector="useGeolocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="cCV-Sf-aYt"/>
                                         </connections>
@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XPM-Lf-Lp3">
-                                <rect key="frame" x="16" y="247" width="174" height="84"/>
+                                <rect key="frame" x="16" y="159" width="174" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ta8-CH-c2l">
                                         <rect key="frame" x="0.0" y="0.0" width="63" height="84"/>
@@ -115,7 +115,7 @@
                                 </subviews>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-8u-wdk">
-                                <rect key="frame" x="164.66666666666666" y="272" width="85" height="46"/>
+                                <rect key="frame" x="117.5" y="184" width="85" height="46"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="d3w-mz-3dW"/>
@@ -137,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcd-UQ-Y0H">
-                                <rect key="frame" x="268.66666666666669" y="272" width="129.33333333333331" height="46"/>
+                                <rect key="frame" x="204" y="184" width="100" height="46"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="WfU-dK-cme"/>
@@ -197,11 +197,11 @@
             <objects>
                 <tableViewController id="Q7r-yd-GIV" customClass="WeatherShowTableViewController" customModule="weatherCoordinates" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TLe-3Q-gzy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="eba-hK-eTs">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <connections>
@@ -217,24 +217,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ic-qM-McT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869" y="122"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Nz8-Cb-CcD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vSv-TR-15e" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jqv-3d-1iZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ivf-5Z-6tq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rx-hN-IF8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138.75" y="129.92957746478874"/>
         </scene>
     </scenes>
     <resources>

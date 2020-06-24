@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 class NetworkService {
     static let shared = NetworkService()
     private init() {}
@@ -32,6 +32,18 @@ class NetworkService {
                 }
             case .failure(_):
                 complition(nil)
+            }
+        }
+    }
+    
+    func alamofireNetworkReqest(with urlString: UrlString, complition: @escaping (([WeatherModel]?)->())) {
+        AF.request(urlString.urlString).validate().responseJSON { responce in
+            switch responce.result {
+            case .success(let value):
+                let weathers = WeatherModel.getWeathers(from: value)
+                complition(weathers)
+            case .failure(let error):
+                print(error)
             }
         }
     }
